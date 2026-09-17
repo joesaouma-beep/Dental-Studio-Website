@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="70" viewBox="0 0 420 70">
+  <g transform="translate(0,10) scale(0.48)">
+    <path d="M3 101V33C3 16.4 16.4 3 33 3h20c16.6 0 30 13.4 30 30v68" stroke="#A8823F" stroke-width="5" fill="none"></path>
+    <path d="M43 101V23" stroke="#14263F" stroke-width="5" fill="none"></path>
+  </g>
+  <text x="58" y="36" font-family="Cormorant Garamond, Georgia, serif" font-size="24" letter-spacing="5.8" fill="#14263F"><tspan font-weight="700">D</tspan>ENTAL <tspan font-weight="700">S</tspan>TUDIO</text>
+  <text x="58" y="58" font-family="Cormorant Garamond, Georgia, serif" font-size="14" letter-spacing="4.5" fill="#A8823F">SYDNEY</text>
+</svg>
