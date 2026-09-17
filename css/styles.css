@@ -169,11 +169,28 @@ h1 { font-size: clamp(38px, 5.6vw, 78px); letter-spacing: -0.02em; line-height: 
 .brand-word__name b { font-weight: 700; }
 .brand-word__sub { font-family: var(--font-display); font-size: 14px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); }
 
-.nav-desktop { display: flex; align-items: center; gap: 30px; margin-left: auto; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; }
-@media (max-width: 1040px) { .nav-desktop, .nav-book-desktop { display: none !important; } }
+/* Nav is set in the display serif, matching the wordmark and headings. */
+.nav-desktop {
+  display: flex; align-items: center; gap: 26px; margin-left: auto;
+  font-family: var(--font-display); font-size: 19px; font-weight: 400;
+  letter-spacing: 0.01em; text-transform: none;
+}
+@media (max-width: 1200px) { .nav-desktop, .nav-book-desktop { display: none !important; } }
 .nav-item { position: relative; padding: 22px 0; }
-.nav-item > .nav-trigger { cursor: pointer; background: none; border: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--navy); padding: 0; }
+.nav-item > .nav-trigger {
+  cursor: pointer; background: none; border: 0; font: inherit; letter-spacing: inherit;
+  text-transform: inherit; color: var(--navy); padding: 0;
+  display: inline-flex; align-items: center; gap: 7px;
+}
 .nav-item > a.nav-trigger { display: inline-block; }
+.nav-desktop .nav-link, .nav-item > .nav-trigger { padding: 22px 0; transition: color 200ms ease; white-space: nowrap; }
+.nav-book-desktop { white-space: nowrap; flex-shrink: 0; }
+.nav-desktop .nav-link:hover, .nav-item > .nav-trigger:hover { color: var(--gold); }
+.nav-caret {
+  width: 6px; height: 6px; border-right: 1.3px solid var(--gold); border-bottom: 1.3px solid var(--gold);
+  transform: translateY(-2px) rotate(45deg); transition: transform 280ms var(--ease-lift);
+}
+.nav-item.is-open .nav-caret { transform: translateY(1px) rotate(225deg); }
 
 .mega-menu {
   position: fixed; top: 116px; left: 50%; transform: translateX(-50%); width: min(1180px, calc(100vw - 48px));
@@ -192,21 +209,21 @@ h1 { font-size: clamp(38px, 5.6vw, 78px); letter-spacing: -0.02em; line-height: 
 .mega-menu__links a { color: var(--body-text-strong); display: block; transform-origin: left center; transition: transform 260ms var(--ease-lift), color 200ms ease; }
 .mega-menu__links a:hover { transform: scale(1.09); color: var(--navy); }
 
-.practice-menu {
+.drop-menu {
   position: absolute; top: 100%; left: -24px; background: var(--bone); border: 1px solid var(--divider);
   border-top: 3px solid var(--gold); padding: 24px 28px; display: none; flex-direction: column; gap: 11px;
   min-width: 210px; text-transform: none; letter-spacing: 0.01em; font-size: 14px; box-shadow: 0 24px 48px rgba(20,38,63,0.14);
 }
-.nav-item.is-open .practice-menu { display: flex; }
-.practice-menu a { color: var(--body-text-strong); transition: transform 260ms var(--ease-lift), color 200ms ease; transform-origin: left center; }
-.practice-menu a:hover { transform: scale(1.09); color: var(--navy); }
+.nav-item.is-open .drop-menu { display: flex; }
+.drop-menu a { color: var(--body-text-strong); transition: transform 260ms var(--ease-lift), color 200ms ease; transform-origin: left center; }
+.drop-menu a:hover { transform: scale(1.09); color: var(--navy); }
 
 .nav-mobile-toggle {
   margin-left: auto; background: transparent; border: 1px solid var(--field-border); color: var(--navy);
   padding: 12px 18px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; display: none;
   flex-shrink: 0; white-space: nowrap;
 }
-@media (max-width: 1040px) { .nav-mobile-toggle { display: inline-block; } }
+@media (max-width: 1200px) { .nav-mobile-toggle { display: inline-block; } }
 
 /* Below the nav breakpoint the desktop wordmark no longer has room to
    spread out at full tracking — compact it so the menu button never
@@ -248,7 +265,7 @@ h1 { font-size: clamp(38px, 5.6vw, 78px); letter-spacing: -0.02em; line-height: 
   transition: background 260ms ease, border-color 260ms ease, color 260ms ease;
 }
 .nav-phone:hover { background: var(--gold); border-color: var(--gold); color: var(--white); }
-@media (max-width: 1040px) { .nav-phone { display: flex; margin-left: auto; } }
+@media (max-width: 1200px) { .nav-phone { display: flex; margin-left: auto; } }
 
 .nav-burger { display: block; width: 20px; }
 .nav-burger i {

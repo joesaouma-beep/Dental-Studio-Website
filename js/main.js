@@ -28,7 +28,7 @@
     items.forEach(function (el) {
       el.addEventListener('mouseenter', function () { openItem(el); });
       el.addEventListener('mouseleave', scheduleClose);
-      var panel = el.querySelector('.mega-menu, .practice-menu');
+      var panel = el.querySelector('.mega-menu, .drop-menu');
       if (panel) {
         panel.addEventListener('mouseenter', holdOpen);
         panel.addEventListener('mouseleave', scheduleClose);
@@ -51,7 +51,7 @@
       });
     });
 
-    var mq = window.matchMedia('(min-width: 1041px)');
+    var mq = window.matchMedia('(min-width: 1201px)');
     mq.addEventListener('change', function (e) {
       if (e.matches) closeAll();
     });
@@ -99,7 +99,7 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && overlay.classList.contains('is-open')) close();
     });
-    window.matchMedia('(min-width: 1041px)').addEventListener('change', function (e) {
+    window.matchMedia('(min-width: 1201px)').addEventListener('change', function (e) {
       if (e.matches && overlay.classList.contains('is-open')) close();
     });
 
