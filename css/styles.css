@@ -175,7 +175,7 @@ h1 { font-size: clamp(38px, 5.6vw, 78px); letter-spacing: -0.02em; line-height: 
   font-family: var(--font-display); font-size: 19px; font-weight: 400;
   letter-spacing: 0.01em; text-transform: none;
 }
-@media (max-width: 1200px) { .nav-desktop, .nav-book-desktop { display: none !important; } }
+@media (max-width: 1040px) { .nav-desktop, .nav-book-desktop { display: none !important; } }
 .nav-item { position: relative; padding: 22px 0; }
 .nav-item > .nav-trigger {
   cursor: pointer; background: none; border: 0; font: inherit; letter-spacing: inherit;
@@ -223,7 +223,7 @@ h1 { font-size: clamp(38px, 5.6vw, 78px); letter-spacing: -0.02em; line-height: 
   padding: 12px 18px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; display: none;
   flex-shrink: 0; white-space: nowrap;
 }
-@media (max-width: 1200px) { .nav-mobile-toggle { display: inline-block; } }
+@media (max-width: 1040px) { .nav-mobile-toggle { display: inline-block; } }
 
 /* Below the nav breakpoint the desktop wordmark no longer has room to
    spread out at full tracking — compact it so the menu button never
@@ -265,7 +265,7 @@ h1 { font-size: clamp(38px, 5.6vw, 78px); letter-spacing: -0.02em; line-height: 
   transition: background 260ms ease, border-color 260ms ease, color 260ms ease;
 }
 .nav-phone:hover { background: var(--gold); border-color: var(--gold); color: var(--white); }
-@media (max-width: 1200px) { .nav-phone { display: flex; margin-left: auto; } }
+@media (max-width: 1040px) { .nav-phone { display: flex; margin-left: auto; } }
 
 .nav-burger { display: block; width: 20px; }
 .nav-burger i {

@@ -51,7 +51,7 @@
       });
     });
 
-    var mq = window.matchMedia('(min-width: 1201px)');
+    var mq = window.matchMedia('(min-width: 1041px)');
     mq.addEventListener('change', function (e) {
       if (e.matches) closeAll();
     });
@@ -99,7 +99,7 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && overlay.classList.contains('is-open')) close();
     });
-    window.matchMedia('(min-width: 1201px)').addEventListener('change', function (e) {
+    window.matchMedia('(min-width: 1041px)').addEventListener('change', function (e) {
       if (e.matches && overlay.classList.contains('is-open')) close();
     });
 
