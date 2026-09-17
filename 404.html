@@ -21,20 +21,153 @@
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
+<div class="announce">
+  <span class="announce__text">New patients welcome. Saturday appointments available.</span>
+  <a class="announce__link" href="contact.html">Book an appointment &rarr;</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="brand" aria-label="Dental Studio Sydney home">
       <img src="assets/site-mark-ink.svg" alt="" width="72" height="72">
-      <span class="brand-word"><span class="brand-word__name"><b>D</b>ental <b>S</b>tudio</span><span class="brand-word__sub">Sydney</span></span>
+      <span class="brand-word">
+        <span class="brand-word__name"><b>D</b>ental <b>S</b>tudio</span>
+        <span class="brand-word__sub">Sydney</span>
+      </span>
     </a>
     <nav class="nav-desktop" aria-label="Primary">
-      <a href="treatments/index.html" style="padding:22px 0;">Treatments</a>
-      <a href="about.html" style="padding:22px 0;">About</a>
+      <div class="nav-item" data-menu="treatments">
+        <button type="button" class="nav-trigger" aria-haspopup="true" aria-expanded="false">Treatments</button>
+        <div class="mega-menu">
+          <div class="mega-menu__col">
+            <a href="treatments/check-up-clean.html" class="mega-menu__cat">General Dentistry</a>
+            <div class="mega-menu__links">
+              <a href="treatments/check-up-clean.html">Check-up &amp; Clean</a>
+              <a href="treatments/tooth-fillings.html">Tooth Fillings</a>
+              <a href="treatments/root-canal-therapy.html">Root Canal Therapy</a>
+              <a href="treatments/porcelain-crowns.html">Porcelain Crowns</a>
+              <a href="treatments/porcelain-bridges.html">Porcelain Bridges</a>
+              <a href="treatments/gum-disease.html">Gum Disease</a>
+              <a href="treatments/wisdom-teeth.html">Wisdom Teeth</a>
+              <a href="treatments/tooth-extractions.html">Tooth Extractions</a>
+              <a href="treatments/dental-implants.html">Dental Implants</a>
+              <a href="treatments/childrens-dentistry.html">Children's Dentistry</a>
+              <a href="treatments/dentures.html">Dentures</a>
+            </div>
+          </div>
+          <div class="mega-menu__col">
+            <a href="treatments/teeth-whitening.html" class="mega-menu__cat">Cosmetic Dentistry</a>
+            <div class="mega-menu__links">
+              <a href="treatments/teeth-whitening.html">Teeth Whitening</a>
+              <a href="treatments/composite-veneers.html">Composite Veneers</a>
+              <a href="treatments/porcelain-veneers.html">Porcelain Veneers</a>
+              <a href="treatments/gum-contouring.html">Gum Contouring</a>
+            </div>
+          </div>
+          <div class="mega-menu__col">
+            <a href="treatments/orthodontics-invisalign.html" class="mega-menu__cat">Orthodontics</a>
+            <div class="mega-menu__links">
+              <a href="treatments/orthodontics-invisalign.html">Orthodontics &amp; Invisalign</a>
+            </div>
+          </div>
+          <div class="mega-menu__col">
+            <a href="treatments/dental-emergencies.html" class="mega-menu__cat">Specialised Care</a>
+            <div class="mega-menu__links">
+              <a href="treatments/dental-emergencies.html">Dental Emergencies</a>
+              <a href="treatments/sleep-dentistry.html">Sleep Dentistry &amp; Sedation</a>
+              <a href="treatments/snoring-sleep-apnoea.html">Snoring &amp; Sleep Apnoea</a>
+              <a href="treatments/mouthguards.html">Custom Mouthguards</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu="practice">
+        <button type="button" class="nav-trigger" aria-haspopup="true" aria-expanded="false">Practice</button>
+        <div class="practice-menu">
+          <a href="about.html">About</a>
+          <a href="team.html">Our Team</a>
+          <a href="offers.html">Offers</a>
+          <a href="payment-plans.html">Payment Plans</a>
+          <a href="new-patients.html">New Patients</a>
+          <a href="blog/index.html">Blog</a>
+        </div>
+      </div>
       <a href="contact.html" style="padding:22px 0;">Contact</a>
     </nav>
+    <a href="tel:0291999690" class="nav-phone" aria-label="Call the practice on 02 9199 9690">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
     <a href="contact.html" class="btn btn-gold nav-book-desktop">Book Appointment</a>
+    <button type="button" class="nav-mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+      <span class="nav-burger" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
   </div>
 </header>
+
+<div class="nav-overlay" id="nav-overlay" data-nav-overlay hidden>
+  <div class="nav-overlay__top">
+    <a href="index.html" class="brand" aria-label="Dental Studio Sydney home">
+      <img src="assets/site-mark-ink.svg" alt="" width="72" height="72">
+      <span class="brand-word">
+        <span class="brand-word__name"><b>D</b>ental <b>S</b>tudio</span>
+        <span class="brand-word__sub">Sydney</span>
+      </span>
+    </a>
+    <button type="button" class="nav-overlay__close" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="nav-overlay__body" aria-label="Mobile">
+    <div class="nav-acc">
+      <button type="button" class="nav-acc__head" aria-expanded="false">Treatments<span class="nav-acc__chev" aria-hidden="true"></span></button>
+      <div class="nav-acc__panel">
+        <div class="nav-acc__inner">
+          <span class="nav-acc__group">General Dentistry</span>
+          <a href="treatments/check-up-clean.html">Check-up &amp; Clean</a>
+          <a href="treatments/tooth-fillings.html">Tooth Fillings</a>
+          <a href="treatments/root-canal-therapy.html">Root Canal Therapy</a>
+          <a href="treatments/porcelain-crowns.html">Porcelain Crowns</a>
+          <a href="treatments/porcelain-bridges.html">Porcelain Bridges</a>
+          <a href="treatments/gum-disease.html">Gum Disease</a>
+          <a href="treatments/wisdom-teeth.html">Wisdom Teeth</a>
+          <a href="treatments/tooth-extractions.html">Tooth Extractions</a>
+          <a href="treatments/dental-implants.html">Dental Implants</a>
+          <a href="treatments/childrens-dentistry.html">Children's Dentistry</a>
+          <a href="treatments/dentures.html">Dentures</a>
+          <span class="nav-acc__group">Cosmetic Dentistry</span>
+          <a href="treatments/teeth-whitening.html">Teeth Whitening</a>
+          <a href="treatments/composite-veneers.html">Composite Veneers</a>
+          <a href="treatments/porcelain-veneers.html">Porcelain Veneers</a>
+          <a href="treatments/gum-contouring.html">Gum Contouring</a>
+          <span class="nav-acc__group">Orthodontics</span>
+          <a href="treatments/orthodontics-invisalign.html">Orthodontics &amp; Invisalign</a>
+          <span class="nav-acc__group">Specialised Care</span>
+          <a href="treatments/dental-emergencies.html">Dental Emergencies</a>
+          <a href="treatments/sleep-dentistry.html">Sleep Dentistry &amp; Sedation</a>
+          <a href="treatments/snoring-sleep-apnoea.html">Snoring &amp; Sleep Apnoea</a>
+          <a href="treatments/mouthguards.html">Custom Mouthguards</a>
+          <a class="nav-acc__all" href="treatments/index.html">View all treatments &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-acc">
+      <button type="button" class="nav-acc__head" aria-expanded="false">The Practice<span class="nav-acc__chev" aria-hidden="true"></span></button>
+      <div class="nav-acc__panel">
+        <div class="nav-acc__inner">
+          <a href="about.html">About</a>
+          <a href="team.html">Our Team</a>
+          <a href="offers.html">Offers</a>
+          <a href="payment-plans.html">Payment Plans</a>
+          <a href="new-patients.html">New Patients</a>
+          <a href="blog/index.html">Blog</a>
+        </div>
+      </div>
+    </div>
+    <a class="nav-overlay__link" href="all-on-x.html">All-on-X</a>
+    <a class="nav-overlay__link" href="contact.html">Contact</a>
+  </nav>
+  <div class="nav-overlay__foot">
+    <a href="tel:0291999690" class="btn btn-outline btn-sm">02 9199 9690</a>
+    <a href="contact.html" class="btn btn-gold btn-sm">Book Appointment</a>
+  </div>
+</div>
 <div class="watermark" aria-hidden="true"><img src="assets/site-mark-gold.svg" alt="" width="640" height="640"></div>
 
 <main id="main">
@@ -67,6 +200,17 @@
   </div>
   <div class="footer-bottom"><div class="container"><div>© 2026 Dental Studio, Leppington.</div></div></div>
 </footer>
+<div class="ask-bar" data-ask-bar hidden>
+  <button type="button" class="ask-bar__close" aria-label="Dismiss">&times;</button>
+  <div class="ask-bar__title">Got a question? Get in touch</div>
+  <div class="ask-bar__actions">
+    <a href="tel:0291999690" class="btn btn-outline btn-sm">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Call us
+    </a>
+    <a href="contact.html" class="btn btn-gold btn-sm">Send message</a>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

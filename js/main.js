@@ -51,21 +51,74 @@
       });
     });
 
-    /* Mobile nav panel */
-    var toggle = document.querySelector('.nav-mobile-toggle');
-    var panel = document.querySelector('.nav-mobile-panel');
-    if (toggle && panel) {
-      toggle.addEventListener('click', function () {
-        panel.classList.toggle('is-open');
-      });
-      panel.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', function () { panel.classList.remove('is-open'); });
-      });
-    }
     var mq = window.matchMedia('(min-width: 1041px)');
     mq.addEventListener('change', function (e) {
-      if (e.matches && panel) panel.classList.remove('is-open');
       if (e.matches) closeAll();
+    });
+  }
+
+  /* ---------------- Fullscreen overlay nav (mobile) ---------------- */
+  function initOverlayNav() {
+    var toggle = document.querySelector('.nav-mobile-toggle');
+    var overlay = document.querySelector('[data-nav-overlay]');
+    if (!toggle || !overlay) return;
+    var closeBtn = overlay.querySelector('.nav-overlay__close');
+    var lastFocus = null;
+
+    function open() {
+      lastFocus = document.activeElement;
+      overlay.hidden = false;
+      /* Force a reflow so the transition runs from the hidden state. */
+      void overlay.offsetWidth;
+      overlay.classList.add('is-open');
+      toggle.classList.add('is-active');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('nav-open');
+      if (closeBtn) closeBtn.focus();
+    }
+    function close() {
+      overlay.classList.remove('is-open');
+      toggle.classList.remove('is-active');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+      var done = function () {
+        if (!overlay.classList.contains('is-open')) overlay.hidden = true;
+        overlay.removeEventListener('transitionend', done);
+      };
+      overlay.addEventListener('transitionend', done);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    toggle.addEventListener('click', function () {
+      if (overlay.classList.contains('is-open')) close(); else open();
+    });
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    overlay.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', close);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) close();
+    });
+    window.matchMedia('(min-width: 1041px)').addEventListener('change', function (e) {
+      if (e.matches && overlay.classList.contains('is-open')) close();
+    });
+
+    /* Accordion sections inside the overlay */
+    overlay.querySelectorAll('.nav-acc').forEach(function (acc) {
+      var head = acc.querySelector('.nav-acc__head');
+      if (!head) return;
+      head.addEventListener('click', function () {
+        var isOpen = acc.classList.contains('is-open');
+        overlay.querySelectorAll('.nav-acc').forEach(function (other) {
+          other.classList.remove('is-open');
+          var h = other.querySelector('.nav-acc__head');
+          if (h) h.setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          acc.classList.add('is-open');
+          head.setAttribute('aria-expanded', 'true');
+        }
+      });
     });
   }
 
@@ -163,6 +216,79 @@
     });
   }
 
+  /* ---------------- Offers accordion (mobile) ---------------- */
+  function initOffers() {
+    var wrap = document.querySelector('[data-offers]');
+    if (!wrap) return;
+    var items = Array.prototype.slice.call(wrap.querySelectorAll('.offer-item'));
+    var accordionMq = window.matchMedia('(max-width: 860px)');
+
+    items.forEach(function (item) {
+      var head = item.querySelector('.offer-item__head');
+      if (!head) return;
+      head.addEventListener('click', function () {
+        /* Above the accordion breakpoint the panels are always open, so the
+           header behaves as a plain link through to the offers page. */
+        if (!accordionMq.matches) {
+          window.location.href = 'offers.html';
+          return;
+        }
+        var isOpen = item.classList.contains('is-open');
+        items.forEach(function (other) {
+          other.classList.remove('is-open');
+          var h = other.querySelector('.offer-item__head');
+          if (h) h.setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('is-open');
+          head.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    accordionMq.addEventListener('change', function () {
+      items.forEach(function (item) {
+        item.classList.remove('is-open');
+        var h = item.querySelector('.offer-item__head');
+        if (h) h.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  /* ---------------- Floating contact popup ---------------- */
+  function initAskBar() {
+    var bar = document.querySelector('[data-ask-bar]');
+    if (!bar) return;
+
+    var DISMISS_KEY = 'ds-ask-dismissed';
+    try {
+      if (sessionStorage.getItem(DISMISS_KEY) === '1') return;
+    } catch (e) { /* private mode — just show it */ }
+
+    bar.hidden = false;
+    bar.classList.add('is-hidden');
+
+    /* Hold it back until the visitor has actually engaged with the page. */
+    function reveal() {
+      bar.classList.remove('is-hidden');
+      window.removeEventListener('scroll', onScroll);
+    }
+    function onScroll() {
+      if (window.scrollY > 400) reveal();
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    setTimeout(function () { if (window.scrollY > 400) reveal(); }, 100);
+
+    var close = bar.querySelector('.ask-bar__close');
+    if (close) {
+      close.addEventListener('click', function () {
+        bar.classList.add('is-hidden');
+        window.removeEventListener('scroll', onScroll);
+        try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch (e) {}
+      });
+    }
+  }
+
   /* ---------------- Contact form ---------------- */
   function initContactForm() {
     var form = document.querySelector('[data-contact-form]');
@@ -184,11 +310,14 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     initNav();
+    initOverlayNav();
     initReveal();
     initPhotoSettle();
     initHero();
     initPrincipalShuffle();
     initTeamCards();
+    initOffers();
+    initAskBar();
     initContactForm();
   });
 })();
