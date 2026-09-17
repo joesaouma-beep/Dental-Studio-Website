@@ -204,8 +204,25 @@ h1 { font-size: clamp(38px, 5.6vw, 78px); letter-spacing: -0.02em; line-height: 
 .nav-mobile-toggle {
   margin-left: auto; background: transparent; border: 1px solid var(--field-border); color: var(--navy);
   padding: 12px 18px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; display: none;
+  flex-shrink: 0; white-space: nowrap;
 }
 @media (max-width: 1040px) { .nav-mobile-toggle { display: inline-block; } }
+
+/* Below the nav breakpoint the desktop wordmark no longer has room to
+   spread out at full tracking — compact it so the menu button never
+   gets pushed past the viewport edge. */
+@media (max-width: 600px) {
+  .site-header .container { gap: 14px; padding-top: 12px; padding-bottom: 12px; }
+  .brand { gap: 10px; min-width: 0; }
+  .brand img { width: 40px; height: 40px; }
+  .brand-word__name { font-size: 15px; letter-spacing: 0.14em; white-space: nowrap; }
+  .brand-word__sub { font-size: 9px; letter-spacing: 0.22em; }
+  .nav-mobile-toggle { padding: 10px 13px; font-size: 11px; }
+}
+@media (max-width: 360px) {
+  .brand-word__name { font-size: 13px; letter-spacing: 0.1em; }
+  .brand img { width: 36px; height: 36px; }
+}
 
 .nav-mobile-panel { border-top: 1px solid var(--divider); background: var(--bone); max-height: 70vh; overflow-y: auto; display: none; }
 .nav-mobile-panel.is-open { display: block; }
@@ -215,11 +232,11 @@ h1 { font-size: clamp(38px, 5.6vw, 78px); letter-spacing: -0.02em; line-height: 
 .nav-mobile-panel .mega-menu__links a { color: var(--body-text-strong); }
 
 /* ---------- Fixed watermark ---------- */
-.watermark { position: fixed; inset: 0; z-index: 1; pointer-events: none; display: flex; align-items: center; justify-content: center; }
+.watermark { position: fixed; inset: 0; z-index: -1; pointer-events: none; display: flex; align-items: center; justify-content: center; }
 .watermark img { width: 46vw; max-width: 640px; opacity: 0.016; filter: blur(0.4px); }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; overflow: hidden; }
+.hero { position: relative; overflow: hidden; color: var(--white); }
 .hero__media { position: absolute; inset: 0; }
 .hero__slide { position: absolute; inset: 0; overflow: hidden; opacity: 0; }
 .hero__slide.is-base { opacity: 1; }
