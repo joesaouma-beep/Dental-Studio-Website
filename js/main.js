@@ -122,25 +122,81 @@
     });
   }
 
+  /* ---------------- FAQ accordion ---------------- */
+  function initFaq() {
+    var items = document.querySelectorAll('.faq-item');
+    if (!items.length) return;
+    items.forEach(function (item) {
+      var head = item.querySelector('.faq-item__head');
+      if (!head) return;
+      head.addEventListener('click', function () {
+        var isOpen = item.classList.contains('is-open');
+        items.forEach(function (other) {
+          other.classList.remove('is-open');
+          var h = other.querySelector('.faq-item__head');
+          if (h) h.setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('is-open');
+          head.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  }
+
   /* ---------------- Scroll reveal ---------------- */
   function initReveal() {
-    var targets = document.querySelectorAll('.reveal');
+    var targets = document.querySelectorAll('.reveal, .rise, .zoom-in');
     if (!targets.length) return;
     if (reduceMotion || !('IntersectionObserver' in window)) {
       targets.forEach(function (t) { t.classList.add('in-view'); });
       return;
     }
+    function show(el, stagger) {
+      if (el.classList.contains('in-view')) return;
+      var delay = stagger ? Math.min(parseInt(el.dataset.revealIndex || '0', 10), 5) * 70 : 0;
+      if (delay) setTimeout(function () { el.classList.add('in-view'); }, delay);
+      else el.classList.add('in-view');
+    }
+
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry, i) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          var el = entry.target;
-          var delay = Math.min(parseInt(el.dataset.revealIndex || '0', 10), 5) * 70;
-          setTimeout(function () { el.classList.add('in-view'); }, delay);
-          io.unobserve(el);
+          show(entry.target, true);
+          io.unobserve(entry.target);
         }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     targets.forEach(function (t) { io.observe(t); });
+
+    /* Safety net. The observer only reports elements that cross into view
+       while it is watching, so anything the page lands past — a deep link,
+       a restored scroll position, a fast flick — would otherwise stay at
+       opacity 0 forever. Sweep on load and on scroll and reveal anything
+       at or above the fold, so no content can be stranded invisible. */
+    var pending = Array.prototype.slice.call(targets);
+    var ticking = false;
+    function sweep() {
+      ticking = false;
+      for (var i = pending.length - 1; i >= 0; i--) {
+        var el = pending[i];
+        var box = el.getBoundingClientRect();
+        if (box.top < window.innerHeight * 0.94 || box.bottom < 0) {
+          show(el, box.top > 0);
+          io.unobserve(el);
+          pending.splice(i, 1);
+        }
+      }
+    }
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(sweep);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    sweep();
+    [120, 500, 1200].forEach(function (t) { setTimeout(sweep, t); });
   }
 
   /* ---------------- Photo settle ---------------- */
@@ -317,6 +373,7 @@
     initPrincipalShuffle();
     initTeamCards();
     initOffers();
+    initFaq();
     initAskBar();
     initContactForm();
   });

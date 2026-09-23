@@ -68,6 +68,16 @@
       </span>
     </a>
     <nav class="nav-desktop" aria-label="Primary">
+      <div class="nav-item" data-menu="about">
+        <button type="button" class="nav-trigger" aria-haspopup="true" aria-expanded="false">About<span class="nav-caret" aria-hidden="true"></span></button>
+        <div class="drop-menu">
+          <a href="about.html">Our Story</a>
+          <a href="team.html">Our Team</a>
+          <a href="new-patients.html">New Patients</a>
+          <a href="payment-plans.html">Payment Plans</a>
+          <a href="offers.html">Offers</a>
+        </div>
+      </div>
       <div class="nav-item" data-menu="treatments">
         <button type="button" class="nav-trigger" aria-haspopup="true" aria-expanded="false">Treatments<span class="nav-caret" aria-hidden="true"></span></button>
         <div class="mega-menu">
@@ -113,21 +123,6 @@
           </div>
         </div>
       </div>
-      <div class="nav-item" data-menu="about">
-        <button type="button" class="nav-trigger" aria-haspopup="true" aria-expanded="false">About<span class="nav-caret" aria-hidden="true"></span></button>
-        <div class="drop-menu">
-          <a href="about.html">Our Story</a>
-          <a href="team.html">Our Team</a>
-        </div>
-      </div>
-      <div class="nav-item" data-menu="patients">
-        <button type="button" class="nav-trigger" aria-haspopup="true" aria-expanded="false">Patients<span class="nav-caret" aria-hidden="true"></span></button>
-        <div class="drop-menu">
-          <a href="new-patients.html">New Patients</a>
-          <a href="payment-plans.html">Payment Plans</a>
-          <a href="offers.html">Offers</a>
-        </div>
-      </div>
       <a href="blog/index.html" class="nav-link">Blog</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
@@ -153,6 +148,18 @@
     <button type="button" class="nav-overlay__close" aria-label="Close menu">&times;</button>
   </div>
   <nav class="nav-overlay__body" aria-label="Mobile">
+    <div class="nav-acc">
+      <button type="button" class="nav-acc__head" aria-expanded="false">About<span class="nav-acc__chev" aria-hidden="true"></span></button>
+      <div class="nav-acc__panel">
+        <div class="nav-acc__inner">
+          <a href="about.html">Our Story</a>
+          <a href="team.html">Our Team</a>
+          <a href="new-patients.html">New Patients</a>
+          <a href="payment-plans.html">Payment Plans</a>
+          <a href="offers.html">Offers</a>
+        </div>
+      </div>
+    </div>
     <div class="nav-acc">
       <button type="button" class="nav-acc__head" aria-expanded="false">Treatments<span class="nav-acc__chev" aria-hidden="true"></span></button>
       <div class="nav-acc__panel">
@@ -182,25 +189,6 @@
           <a href="treatments/snoring-sleep-apnoea.html">Snoring &amp; Sleep Apnoea</a>
           <a href="treatments/mouthguards.html">Custom Mouthguards</a>
           <a class="nav-acc__all" href="treatments/index.html">View all treatments &rarr;</a>
-        </div>
-      </div>
-    </div>
-    <div class="nav-acc">
-      <button type="button" class="nav-acc__head" aria-expanded="false">About<span class="nav-acc__chev" aria-hidden="true"></span></button>
-      <div class="nav-acc__panel">
-        <div class="nav-acc__inner">
-          <a href="about.html">Our Story</a>
-          <a href="team.html">Our Team</a>
-        </div>
-      </div>
-    </div>
-    <div class="nav-acc">
-      <button type="button" class="nav-acc__head" aria-expanded="false">Patients<span class="nav-acc__chev" aria-hidden="true"></span></button>
-      <div class="nav-acc__panel">
-        <div class="nav-acc__inner">
-          <a href="new-patients.html">New Patients</a>
-          <a href="payment-plans.html">Payment Plans</a>
-          <a href="offers.html">Offers</a>
         </div>
       </div>
     </div>
@@ -241,71 +229,84 @@
       <p class="hero__sub">A modern practice where every visit is unhurried, clearly explained and comfortable — whatever brings you in.</p>
       <div class="btn-row">
         <a href="contact.html" class="btn btn-gold">Book Appointment</a>
-        <a href="treatments/index.html" class="btn btn-outline-invert">Explore Treatments</a>
+        <a href="tel:+61291999690" class="btn btn-outline-invert btn-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Call us
+        </a>
       </div>
       <div class="hero__rebrand">Formerly Gentle Dental Care Leppington</div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="grid grid-2--wide-lead" style="align-items:start;">
-        <div class="reveal from-left">
-          <span class="eyebrow" style="margin-bottom:20px;">The studio</span>
-          <h2 class="feature-title">Modern family and cosmetic dentistry, under one roof</h2>
-        </div>
-        <div class="reveal from-right">
-          <p style="color:var(--body-text);">We built the practice around the parts of a dental visit people find hardest: the waiting, the not-knowing, the rush. Appointments run to time, findings are shown to you on screen, and nothing is booked until you understand why.</p>
-          <p style="color:var(--body-text);">From a routine check-up to a full smile makeover, treatment is planned around what you need clinically and what fits your life — for children, parents and grandparents alike.</p>
-          <p style="color:var(--body-text);">Anxious about treatment? Tell us when you book. We take it slowly, and sedation is available.</p>
-          <blockquote style="margin:0 0 34px;padding:26px 0 26px 28px;border-left:2px solid var(--gold);">
-            <div style="font-family:var(--font-display);font-weight:300;font-size:clamp(22px,2.6vw,30px);line-height:1.3;color:var(--navy);">Same team, same chair, a new standard of care.</div>
-          </blockquote>
-          <div class="btn-row">
-            <a href="about.html" class="btn btn-navy">About Our Studio</a>
-            <a href="team.html" class="btn btn-outline">Meet The Team</a>
-          </div>
-        </div>
+  <!-- Google rating. TODO: replace the score, count and href once the
+       practice's Google Business profile URL is supplied. Rating only —
+       no review text is hosted here, to stay clear of the AHPRA
+       restrictions on testimonials in health advertising. -->
+  <section class="stack stack--flat panel-bone" style="padding:34px 0 30px;">
+    <div class="container" style="padding-top:0;">
+      <div class="rating-strip rise" data-google-rating>
+        <span class="rating-strip__stars" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg>
+        </span>
+        <span class="rating-strip__score" data-rating-score>5.0</span>
+        <span class="rating-strip__meta">Rated by our patients on Google</span>
+        <a class="rating-strip__link" href="#" data-google-link rel="noopener">Read our Google reviews &rarr;</a>
       </div>
-      <div class="grid grid-auto-sm reveal" style="gap:1px;background:var(--divider);border:1px solid var(--divider);margin-top:72px;">
-        <div class="bone-tile">
-          <div class="bone-tile__title">On time</div>
-          <div class="bone-tile__body">Appointments run to schedule. Your time matters as much as ours.</div>
+    </div>
+  </section>
+
+  <!-- How we work: four promises, as stacked colour panels -->
+  <section class="stack panel-navy" style="padding-bottom:96px;">
+    <div class="container">
+      <div class="rise" style="max-width:660px;margin-bottom:44px;">
+        <span class="eyebrow">How we work</span>
+        <h2 class="feature-title">Four things you can count on, every visit</h2>
+      </div>
+      <div class="values">
+        <div class="value-card rise rise-delay-1" style="background:rgba(255,255,255,0.06);">
+          <svg class="value-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+          <div class="value-card__title">On time</div>
+          <p class="value-card__body">Appointments run to schedule. Your time matters as much as ours.</p>
         </div>
-        <div class="bone-tile">
-          <div class="bone-tile__title">Shown, not told</div>
-          <div class="bone-tile__body">Intraoral photographs and x-rays on the screen beside you.</div>
+        <div class="value-card rise rise-delay-2" style="background:rgba(255,255,255,0.06);">
+          <svg class="value-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>
+          <div class="value-card__title">Shown, not told</div>
+          <p class="value-card__body">Intraoral photographs and x-rays on the screen beside you.</p>
         </div>
-        <div class="bone-tile">
-          <div class="bone-tile__title">Quoted in writing</div>
-          <div class="bone-tile__body">An itemised plan before any treatment begins.</div>
+        <div class="value-card rise rise-delay-3" style="background:rgba(255,255,255,0.06);">
+          <svg class="value-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 3h9l4 4v14H6z" stroke-linejoin="round"/><path d="M9 12h7M9 16h5" stroke-linecap="round"/></svg>
+          <div class="value-card__title">Quoted in writing</div>
+          <p class="value-card__body">An itemised plan before any treatment begins.</p>
         </div>
-        <div class="bone-tile">
-          <div class="bone-tile__title">No pressure</div>
-          <div class="bone-tile__body">Options explained, including doing nothing for now.</div>
+        <div class="value-card rise rise-delay-4" style="background:rgba(255,255,255,0.06);">
+          <svg class="value-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.2A4 4 0 0 1 12 8a4 4 0 0 1 7 2.8C19 15.6 12 20 12 20z" stroke-linejoin="round"/></svg>
+          <div class="value-card__title">No pressure</div>
+          <p class="value-card__body">Options explained, including doing nothing for now.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section story">
+  <!-- The studio: intro -->
+  <section class="stack panel-bone" style="padding-bottom:96px;">
     <div class="container">
-      <div class="grid grid-2--clinic story__grid" style="align-items:center;">
-        <div class="reveal from-left">
-          <!-- TODO: replace with a real photograph of the team once one is available.
-               This is currently the reception interior — do not substitute stock
-               imagery of other clinicians (AHPRA advertising rules). -->
-          <div class="photo-well story__photo">
-            <img src="assets/photos/hero-reception-2.jpg" alt="Reception at Dental Studio Sydney in Leppington" loading="lazy">
-          </div>
+      <div class="grid grid-2--wide-lead" style="align-items:start;">
+        <div class="rise">
+          <span class="eyebrow">The studio</span>
+          <h2 class="feature-title">Modern family and cosmetic dentistry, under one roof</h2>
         </div>
-        <div class="reveal from-right story__copy">
-          <span class="eyebrow">Our story</span>
-          <h2 class="feature-title">A neighbourhood practice, rebuilt around the patient</h2>
-          <p>We have looked after Leppington families on Emerald Hills Boulevard for years. In that time the suburb has grown quickly, and so has what our patients ask of us — implants, veneers, aligners, sedation, care for children and grandparents in the same week.</p>
-          <p>The rebrand to Dental Studio marks that shift. It is not a change of ownership or of team. It is a commitment to a higher standard in the things patients actually feel: appointments that run on time, treatment explained before it is recommended, written quotes, and a practice that looks and feels calm.</p>
-          <p>Three principal dentists lead the practice, supported by oral health therapists, dental assistants and a front-of-house team who will know your name by your second visit.</p>
-          <div class="btn-row" style="margin-top:34px;">
+        <div class="rise rise-delay-1">
+          <p style="color:var(--body-text);">We built the practice around the parts of a dental visit people find hardest: the waiting, the not-knowing, the rush. Appointments run to time, findings are shown to you on screen, and nothing is booked until you understand why.</p>
+          <p style="color:var(--body-text);">From a routine check-up to a full smile makeover, treatment is planned around what you need clinically and what fits your life — for children, parents and grandparents alike.</p>
+          <p style="color:var(--body-text);">Anxious about treatment? Tell us when you book. We take it slowly, and sedation is available.</p>
+          <blockquote style="margin:0 0 34px;padding:26px 0 26px 28px;border-left:2px solid var(--terracotta);">
+            <div style="font-family:var(--font-display);font-weight:300;font-size:clamp(22px,2.6vw,30px);line-height:1.3;color:var(--navy);">Same team, same chair, a new standard of care.</div>
+          </blockquote>
+          <div class="btn-row">
             <a href="about.html" class="btn btn-navy">Our story</a>
             <a href="team.html" class="btn btn-outline">Meet the team</a>
           </div>
@@ -314,131 +315,251 @@
     </div>
   </section>
 
-  <section class="section--navy" style="padding:96px 0;">
+  <!-- Treatments showcase with example photography -->
+  <section class="stack panel-bone-shade" style="padding-bottom:96px;">
     <div class="container">
-      <div class="section-head">
-        <h2>Tour our studio</h2>
-        <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);">Emerald Hills Boulevard, Leppington</div>
+      <div class="section-head rise">
+        <h2>Tailored care for every smile</h2>
+        <a href="treatments/index.html" class="section-head__link">All treatments &rarr;</a>
       </div>
-      <div class="mosaic reveal">
-        <figure class="span-2"><div class="photo-well"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=2000&q=80" alt="Surgery one" loading="lazy"></div><figcaption>Surgery one</figcaption></figure>
-        <figure><div class="photo-well"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=2000&q=80" alt="The chair" loading="lazy"></div><figcaption>The chair</figcaption></figure>
-        <figure><div class="photo-well"><img src="https://images.unsplash.com/photo-1606811856475-5e6fcdc6e509?w=2000&q=80" alt="Sterilisation" loading="lazy"></div><figcaption>Sterilisation</figcaption></figure>
-        <figure><div class="photo-well"><img src="https://images.unsplash.com/photo-1667133295315-820bb6481730?w=2000&q=80" alt="Digital scanning" loading="lazy"></div><figcaption>Digital scanning</figcaption></figure>
-        <figure><div class="photo-well"><img src="https://images.unsplash.com/photo-1698749778813-ad5f2814e50f?w=2000&q=80" alt="Reception" loading="lazy"></div><figcaption>Reception</figcaption></figure>
-        <figure class="span-2"><div class="photo-well"><img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=2000&q=80" alt="The team at work" loading="lazy"></div><figcaption>The team at work</figcaption></figure>
+      <div class="showcase">
+        <a href="treatments/check-up-clean.html" class="showcase-card rise rise-delay-1">
+          <div class="showcase-card__media"><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1200&q=80" alt="Check-up and clean appointment" loading="lazy"></div>
+          <div class="showcase-card__body">
+            <div class="showcase-card__title">Check-up &amp; Clean</div>
+            <p>A thorough examination, professional clean and fluoride treatment.</p>
+            <span class="showcase-card__more">Learn more &rarr;</span>
+          </div>
+        </a>
+        <a href="treatments/porcelain-veneers.html" class="showcase-card rise rise-delay-2">
+          <div class="showcase-card__media"><img src="https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?w=1200&q=80" alt="Porcelain veneers" loading="lazy"></div>
+          <div class="showcase-card__body">
+            <div class="showcase-card__title">Porcelain Veneers</div>
+            <p>Thin, custom-made shells bonded to the front of the teeth.</p>
+            <span class="showcase-card__more">Learn more &rarr;</span>
+          </div>
+        </a>
+        <a href="treatments/orthodontics-invisalign.html" class="showcase-card rise rise-delay-3">
+          <div class="showcase-card__media"><img src="https://images.unsplash.com/photo-1564420228450-d9a5bc8d6565?w=1200&q=80" alt="Invisalign clear aligners" loading="lazy"></div>
+          <div class="showcase-card__body">
+            <div class="showcase-card__title">Invisalign</div>
+            <p>Clear aligner treatment to straighten teeth and correct the bite.</p>
+            <span class="showcase-card__more">Learn more &rarr;</span>
+          </div>
+        </a>
+        <a href="treatments/dental-implants.html" class="showcase-card rise rise-delay-4">
+          <div class="showcase-card__media"><img src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?w=1200&q=80" alt="Dental implants" loading="lazy"></div>
+          <div class="showcase-card__body">
+            <div class="showcase-card__title">Dental Implants</div>
+            <p>A titanium post placed in the jaw to support a replacement tooth.</p>
+            <span class="showcase-card__more">Learn more &rarr;</span>
+          </div>
+        </a>
+        <a href="treatments/teeth-whitening.html" class="showcase-card rise rise-delay-1">
+          <div class="showcase-card__media"><img src="https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?w=1200&q=80" alt="Teeth whitening" loading="lazy"></div>
+          <div class="showcase-card__body">
+            <div class="showcase-card__title">Teeth Whitening</div>
+            <p>Professionally supervised whitening, in the chair or take-home.</p>
+            <span class="showcase-card__more">Learn more &rarr;</span>
+          </div>
+        </a>
+        <a href="treatments/childrens-dentistry.html" class="showcase-card rise rise-delay-2">
+          <div class="showcase-card__media"><img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80" alt="Children's dentistry" loading="lazy"></div>
+          <div class="showcase-card__body">
+            <div class="showcase-card__title">Children's Dentistry</div>
+            <p>Calm, unhurried care for children from their first tooth.</p>
+            <span class="showcase-card__more">Learn more &rarr;</span>
+          </div>
+        </a>
+        <a href="treatments/sleep-dentistry.html" class="showcase-card rise rise-delay-3">
+          <div class="showcase-card__media"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80" alt="Sleep dentistry and sedation" loading="lazy"></div>
+          <div class="showcase-card__body">
+            <div class="showcase-card__title">Sleep Dentistry</div>
+            <p>Sedation options for patients who would rather not be aware.</p>
+            <span class="showcase-card__more">Learn more &rarr;</span>
+          </div>
+        </a>
+        <a href="all-on-x.html" class="showcase-card rise rise-delay-4">
+          <div class="showcase-card__media"><img src="https://images.unsplash.com/photo-1667133295315-820bb6481730?w=1200&q=80" alt="All-on-X full arch implants" loading="lazy"></div>
+          <div class="showcase-card__body">
+            <div class="showcase-card__title">All-on-X</div>
+            <p>A full arch of fixed teeth on four to six implants.</p>
+            <span class="showcase-card__more">Learn more &rarr;</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- Patient offers -->
+  <section class="stack panel-terracotta" style="padding-bottom:96px;" id="offers">
     <div class="container">
-      <div class="grid grid-4" style="gap:2px;">
-        <a href="all-on-x.html" class="tile-panel reveal" data-reveal-index="0">
-          <div class="photo-well"><img src="https://images.unsplash.com/photo-1667133295315-820bb6481730?w=2000&q=80" alt="Digital scanning and same-day planning" loading="lazy"></div>
-          <div class="tile-panel__scrim"></div>
-          <div class="tile-panel__body">
-            <div class="tile-panel__kicker">Advanced technology</div>
-            <div class="tile-panel__title">Digital scanning and same-day planning</div>
-            <span class="tile-panel__cta">Learn more →</span>
+      <div class="rise" style="max-width:680px;margin-bottom:44px;">
+        <span class="eyebrow">Patient offers</span>
+        <h2 class="feature-title">Special offers for new and returning patients</h2>
+        <p style="margin-top:16px;">Offers are subject to availability and to a clinical assessment of your suitability. Terms apply.</p>
+      </div>
+      <div class="offer-grid">
+        <div class="offer-tile rise rise-delay-1">
+          <div class="offer-tile__kicker">New patients</div>
+          <div class="offer-tile__title">Check-up, x-rays, clean &amp; fluoride</div>
+          <div class="offer-tile__price">$195<small>or no gap with eligible health fund cover</small></div>
+          <p class="offer-tile__terms">$195 without health fund cover. Gap free for patients with eligible cover, claimed on the spot through HICAPS. Includes examination, any necessary x-rays, professional clean and fluoride.</p>
+        </div>
+        <div class="offer-tile rise rise-delay-2">
+          <div class="offer-tile__kicker">Cosmetic</div>
+          <div class="offer-tile__title">Free cosmetic consultation</div>
+          <div class="offer-tile__price">Free<small>no obligation</small></div>
+          <p class="offer-tile__terms">Complimentary consultation to discuss veneers, bonding or whitening. Treatment quoted after clinical assessment. Suitability confirmed at the appointment.</p>
+        </div>
+        <div class="offer-tile rise rise-delay-3">
+          <div class="offer-tile__kicker">Implants</div>
+          <div class="offer-tile__title">Free implant consultation</div>
+          <div class="offer-tile__price">Free<small>includes treatment discussion</small></div>
+          <p class="offer-tile__terms">Complimentary consultation to discuss single implants or full-arch treatment. Imaging and treatment quoted after clinical assessment.</p>
+        </div>
+        <div class="offer-tile rise rise-delay-4">
+          <div class="offer-tile__kicker">Invisalign</div>
+          <div class="offer-tile__title">Free Invisalign consultation</div>
+          <div class="offer-tile__price">Free<small>includes digital scan</small></div>
+          <p class="offer-tile__terms">Complimentary consultation with a digital scan and simulation of your projected result. Suitability confirmed at the appointment.</p>
+        </div>
+      </div>
+      <div class="btn-row rise" style="margin-top:40px;">
+        <a href="contact.html" class="btn btn-white">Book an appointment</a>
+        <a href="offers.html" class="btn btn-outline-invert">All offers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the dentists -->
+  <section class="stack panel-bone" style="padding-bottom:96px;">
+    <div class="container">
+      <div class="section-head rise">
+        <h2>Meet your dentists</h2>
+        <a href="team.html" class="section-head__link">The whole team &rarr;</a>
+      </div>
+      <p class="rise" style="color:var(--body-text);max-width:660px;margin-bottom:38px;">Three principal dentists lead the practice, supported by associate dentists, oral health therapists and visiting specialists in orthodontics and sedation.</p>
+      <div class="team-grid" data-principals>
+        <a href="team/dr-joseph-saouma.html" class="person rise rise-delay-1">
+          <div class="person__media"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1000&q=80" alt="Dr Joseph Saouma" loading="lazy"></div>
+          <div class="person__body">
+            <div class="person__role">Principal Dentist</div>
+            <div class="person__name">Dr Joseph Saouma</div>
+            <div class="person__interests">Restorative and implant dentistry</div>
+            <span class="person__more">Read biography &rarr;</span>
           </div>
         </a>
-        <a href="new-patients.html" class="tile-panel reveal" data-reveal-index="1">
-          <div class="photo-well"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=2000&q=80" alt="Comfortable dentistry for nervous patients" loading="lazy"></div>
-          <div class="tile-panel__scrim"></div>
-          <div class="tile-panel__body">
-            <div class="tile-panel__kicker">Gentle experience</div>
-            <div class="tile-panel__title">Comfortable dentistry for nervous patients</div>
-            <span class="tile-panel__cta">Learn more →</span>
+        <a href="team/dr-michael-lavorato.html" class="person rise rise-delay-2">
+          <div class="person__media"><img src="https://images.unsplash.com/photo-1667133295315-820bb6481730?w=1000&q=80" alt="Dr Michael Lavorato" loading="lazy"></div>
+          <div class="person__body">
+            <div class="person__role">Principal Dentist</div>
+            <div class="person__name">Dr Michael Lavorato</div>
+            <div class="person__interests">Cosmetic and restorative dentistry</div>
+            <span class="person__more">Read biography &rarr;</span>
           </div>
         </a>
-        <a href="payment-plans.html" class="tile-panel reveal" data-reveal-index="2">
-          <div class="photo-well"><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=2000&q=80" alt="All health funds welcome, claimed on the spot" loading="lazy"></div>
-          <div class="tile-panel__scrim"></div>
-          <div class="tile-panel__body">
-            <div class="tile-panel__kicker">Fees and cover</div>
-            <div class="tile-panel__title">All health funds welcome, claimed on the spot</div>
-            <span class="tile-panel__cta">Learn more →</span>
+        <a href="team/dr-michael-ishak.html" class="person rise rise-delay-3">
+          <div class="person__media"><img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1000&q=80" alt="Dr Michael Ishak" loading="lazy"></div>
+          <div class="person__body">
+            <div class="person__role">Principal Dentist</div>
+            <div class="person__name">Dr Michael Ishak</div>
+            <div class="person__interests">Oral surgery and general dentistry</div>
+            <span class="person__more">Read biography &rarr;</span>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <section class="section--navy" style="position:relative;overflow:hidden;padding:112px 0;">
-    <div class="photo-well" style="position:absolute;inset:0;" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?w=2000&q=80" alt="" loading="lazy" style="position:absolute;inset:0;">
-      <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(20,38,63,0.95) 0%, rgba(20,38,63,0.78) 52%, rgba(20,38,63,0.34) 100%);"></div>
-    </div>
-    <div class="container reveal" style="position:relative;z-index:2;">
-      <div style="display:inline-block;background:var(--gold);color:var(--white);padding:7px 12px;font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:24px;">Signature treatment</div>
-      <div class="eyebrow" style="color:var(--gold-light);">Life-changing full-arch treatment</div>
-      <h2 style="font-size:clamp(34px,5vw,66px);letter-spacing:-0.02em;line-height:1.0;margin:0 0 24px;max-width:760px;color:var(--white);"><b style="font-weight:700;">All-on-X</b> full-arch implants</h2>
-      <p style="color:var(--on-navy-lift);margin:0 0 38px;max-width:620px;">A complete arch of fixed teeth on four to six implants — planned digitally, often fitted the same day, quoted in writing before anything begins.</p>
-      <a href="all-on-x.html" class="btn btn-gold">All-on-X in detail</a>
-    </div>
-  </section>
-
-  <section class="section section--bone-shade">
+  <!-- Our story with practice photography -->
+  <section class="stack panel-navy" style="padding-bottom:96px;">
     <div class="container">
-      <div class="section-head">
-        <h2>Current offers</h2>
-        <a href="offers.html" class="section-head__link">All offers →</a>
-      </div>
-      <div class="offers reveal" data-offers>
-        <div class="offer-item">
-          <button type="button" class="offer-item__head" aria-expanded="false">
-            <span class="offer-item__text">
-              <span class="offer-item__kicker">Check-up &amp; clean</span>
-              <span class="offer-item__title">Gap free check-up and clean</span>
-              <span class="offer-item__price">Gap free <em>or $195 without cover</em></span>
-            </span>
-            <span class="offer-item__chev" aria-hidden="true"></span>
-          </button>
-          <div class="offer-item__panel">
-            <div class="offer-item__inner">
-              <div class="offer-item__media photo-well"><img src="https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?w=1600&q=80" alt="Gap free check-up and clean" loading="lazy"></div>
-              <p class="offer-item__body">Comprehensive examination, professional clean, fluoride and any necessary x-rays. Gap free with most health funds, claimed on the spot through HICAPS.</p>
-              <p class="offer-item__terms">Gap free for patients with eligible health fund cover. $195 without cover.</p>
-              <a href="contact.html" class="btn btn-navy btn-sm">Claim this offer</a>
-            </div>
+      <div class="grid grid-2--clinic" style="align-items:center;">
+        <div class="zoom-in">
+          <!-- TODO: replace with a real photograph of the team once available.
+               Currently the reception interior — do not substitute stock
+               imagery of other clinicians (AHPRA advertising rules). -->
+          <div class="photo-well" style="height:520px;border-radius:var(--radius-card);">
+            <img src="assets/photos/hero-reception-2.jpg" alt="Reception at Dental Studio Sydney in Leppington" loading="lazy">
           </div>
         </div>
-        <div class="offer-item">
-          <button type="button" class="offer-item__head" aria-expanded="false">
-            <span class="offer-item__text">
-              <span class="offer-item__kicker">All on X</span>
-              <span class="offer-item__title">Free All on X consultation</span>
-              <span class="offer-item__price">Free <em>no obligation</em></span>
-            </span>
-            <span class="offer-item__chev" aria-hidden="true"></span>
-          </button>
-          <div class="offer-item__panel">
-            <div class="offer-item__inner">
-              <div class="offer-item__media photo-well"><img src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?w=1600&q=80" alt="Free All-on-X consultation" loading="lazy"></div>
-              <p class="offer-item__body">Sit down with our implant team to discuss full-arch treatment, including a scan, photographs and a written plan with staged costs.</p>
-              <p class="offer-item__terms">Complimentary consultation. Treatment quoted after clinical assessment.</p>
-              <a href="contact.html" class="btn btn-navy btn-sm">Claim this offer</a>
-            </div>
+        <div class="rise rise-delay-1">
+          <span class="eyebrow">Our story</span>
+          <h2 class="feature-title">A neighbourhood practice, rebuilt around the patient</h2>
+          <p>We have looked after Leppington families on Emerald Hills Boulevard for years. In that time the suburb has grown quickly, and so has what our patients ask of us — implants, veneers, aligners, sedation, care for children and grandparents in the same week.</p>
+          <p>The rebrand to Dental Studio marks that shift. It is not a change of ownership or of team. It is a commitment to a higher standard in the things patients actually feel: appointments that run on time, treatment explained before it is recommended, written quotes, and a practice that looks and feels calm.</p>
+          <div class="btn-row" style="margin-top:32px;">
+            <a href="about.html" class="btn btn-gold">Read our story</a>
           </div>
         </div>
-        <div class="offer-item">
-          <button type="button" class="offer-item__head" aria-expanded="false">
-            <span class="offer-item__text">
-              <span class="offer-item__kicker">Invisalign</span>
-              <span class="offer-item__title">Free Invisalign consultation</span>
-              <span class="offer-item__price">Free <em>includes digital scan</em></span>
-            </span>
-            <span class="offer-item__chev" aria-hidden="true"></span>
-          </button>
-          <div class="offer-item__panel">
-            <div class="offer-item__inner">
-              <div class="offer-item__media photo-well"><img src="https://images.unsplash.com/photo-1564420228450-d9a5bc8d6565?w=1600&q=80" alt="Free Invisalign consultation" loading="lazy"></div>
-              <p class="offer-item__body">A digital scan and simulation of your finished smile, with aligner options, timeframes and payment plans explained before you commit.</p>
-              <p class="offer-item__terms">Complimentary consultation. Suitability confirmed at the appointment.</p>
-              <a href="contact.html" class="btn btn-navy btn-sm">Claim this offer</a>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- From the journal -->
+  <section class="stack panel-bone" style="padding-bottom:96px;">
+    <div class="container">
+      <div class="section-head rise">
+        <h2>From the journal</h2>
+        <a href="blog/index.html" class="section-head__link">All articles &rarr;</a>
+      </div>
+      <div class="showcase" style="grid-template-columns:repeat(3,minmax(0,1fr));">
+        <a href="blog/first-visit.html" class="showcase-card rise rise-delay-1">
+          <div class="showcase-card__media"><img src="https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?w=1200&q=80" alt="A new patient examination" loading="lazy"></div>
+          <div class="showcase-card__body">
+            <div class="showcase-card__more" style="padding-top:0;">12 August 2026</div>
+            <div class="showcase-card__title">What actually happens at your first appointment</div>
+            <p>A walk through the forty-five minutes of a new patient examination, so there are no surprises.</p>
           </div>
+        </a>
+        <a href="blog/sensitive-teeth.html" class="showcase-card rise rise-delay-2">
+          <div class="showcase-card__media"><img src="https://images.unsplash.com/photo-1564420228450-d9a5bc8d6565?w=1200&q=80" alt="Sensitive teeth" loading="lazy"></div>
+          <div class="showcase-card__body">
+            <div class="showcase-card__more" style="padding-top:0;">28 July 2026</div>
+            <div class="showcase-card__title">Why your teeth are sensitive to cold</div>
+            <p>Sensitivity has several causes, and the right fix depends entirely on which one you have.</p>
+          </div>
+        </a>
+        <a href="blog/aligner-care.html" class="showcase-card rise rise-delay-3">
+          <div class="showcase-card__media"><img src="https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?w=1200&q=80" alt="Clear aligner care" loading="lazy"></div>
+          <div class="showcase-card__body">
+            <div class="showcase-card__more" style="padding-top:0;">9 July 2026</div>
+            <div class="showcase-card__title">Looking after clear aligners</div>
+            <p>Small habits that keep aligners clear, comfortable and on schedule.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="stack panel-bone-shade" style="padding-bottom:96px;">
+    <div class="container">
+      <div class="rise" style="max-width:660px;margin-bottom:40px;">
+        <span class="eyebrow">Questions</span>
+        <h2 class="feature-title">Frequently asked</h2>
+      </div>
+      <div class="faq rise rise-delay-1">
+        <div class="faq-item">
+          <button type="button" class="faq-item__head" aria-expanded="false">Are you taking new patients?<span class="faq-item__chev" aria-hidden="true"></span></button>
+          <div class="faq-item__panel"><div class="faq-item__inner"><p>Yes. New patients of all ages are welcome, and we usually have appointments available within the week.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-item__head" aria-expanded="false">Do you see children?<span class="faq-item__chev" aria-hidden="true"></span></button>
+          <div class="faq-item__panel"><div class="faq-item__inner"><p>We do, from their first tooth onwards. Eligible children may also be covered under the Child Dental Benefits Schedule.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-item__head" aria-expanded="false">I am very anxious about the dentist. What can you do?<span class="faq-item__chev" aria-hidden="true"></span></button>
+          <div class="faq-item__panel"><div class="faq-item__inner"><p>Tell us when you book so we can allow extra time. We will explain everything before it happens, stop whenever you ask, and can arrange sedation for treatment you would rather sleep through.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-item__head" aria-expanded="false">Do you bulk bill or offer payment plans?<span class="faq-item__chev" aria-hidden="true"></span></button>
+          <div class="faq-item__panel"><div class="faq-item__inner"><p>We accept all health funds with HICAPS claiming on the spot, and Zip is available to spread the cost of larger treatment plans.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-item__head" aria-expanded="false">How often should I have a check-up?<span class="faq-item__chev" aria-hidden="true"></span></button>
+          <div class="faq-item__panel"><div class="faq-item__inner"><p>Every six months for most people. If you have gum disease or a high decay risk we may recommend more frequent visits.</p></div></div>
         </div>
       </div>
     </div>
@@ -530,16 +651,12 @@
     </div>
   </div>
 </footer>
-<div class="ask-bar" data-ask-bar hidden>
-  <button type="button" class="ask-bar__close" aria-label="Dismiss">&times;</button>
-  <div class="ask-bar__title">Got a question? Get in touch</div>
-  <div class="ask-bar__actions">
-    <a href="tel:+61291999690" class="btn btn-outline btn-sm">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Call us
-    </a>
-    <a href="contact.html" class="btn btn-gold btn-sm">Send message</a>
-  </div>
+<div class="actionbar">
+  <a href="contact.html" class="btn btn-gold btn-sm">Book Online</a>
+  <a href="tel:+61291999690" class="btn btn-terracotta btn-sm btn-icon">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Call Us
+  </a>
 </div>
 <script src="js/main.js"></script>
 </body>

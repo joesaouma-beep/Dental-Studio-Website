@@ -36,6 +36,16 @@
       </span>
     </a>
     <nav class="nav-desktop" aria-label="Primary">
+      <div class="nav-item" data-menu="about">
+        <button type="button" class="nav-trigger" aria-haspopup="true" aria-expanded="false">About<span class="nav-caret" aria-hidden="true"></span></button>
+        <div class="drop-menu">
+          <a href="../about.html">Our Story</a>
+          <a href="../team.html">Our Team</a>
+          <a href="../new-patients.html">New Patients</a>
+          <a href="../payment-plans.html">Payment Plans</a>
+          <a href="../offers.html">Offers</a>
+        </div>
+      </div>
       <div class="nav-item" data-menu="treatments">
         <button type="button" class="nav-trigger" aria-haspopup="true" aria-expanded="false">Treatments<span class="nav-caret" aria-hidden="true"></span></button>
         <div class="mega-menu">
@@ -81,21 +91,6 @@
           </div>
         </div>
       </div>
-      <div class="nav-item" data-menu="about">
-        <button type="button" class="nav-trigger" aria-haspopup="true" aria-expanded="false">About<span class="nav-caret" aria-hidden="true"></span></button>
-        <div class="drop-menu">
-          <a href="../about.html">Our Story</a>
-          <a href="../team.html">Our Team</a>
-        </div>
-      </div>
-      <div class="nav-item" data-menu="patients">
-        <button type="button" class="nav-trigger" aria-haspopup="true" aria-expanded="false">Patients<span class="nav-caret" aria-hidden="true"></span></button>
-        <div class="drop-menu">
-          <a href="../new-patients.html">New Patients</a>
-          <a href="../payment-plans.html">Payment Plans</a>
-          <a href="../offers.html">Offers</a>
-        </div>
-      </div>
       <a href="../blog/index.html" class="nav-link">Blog</a>
       <a href="../contact.html" class="nav-link">Contact</a>
     </nav>
@@ -121,6 +116,18 @@
     <button type="button" class="nav-overlay__close" aria-label="Close menu">&times;</button>
   </div>
   <nav class="nav-overlay__body" aria-label="Mobile">
+    <div class="nav-acc">
+      <button type="button" class="nav-acc__head" aria-expanded="false">About<span class="nav-acc__chev" aria-hidden="true"></span></button>
+      <div class="nav-acc__panel">
+        <div class="nav-acc__inner">
+          <a href="../about.html">Our Story</a>
+          <a href="../team.html">Our Team</a>
+          <a href="../new-patients.html">New Patients</a>
+          <a href="../payment-plans.html">Payment Plans</a>
+          <a href="../offers.html">Offers</a>
+        </div>
+      </div>
+    </div>
     <div class="nav-acc">
       <button type="button" class="nav-acc__head" aria-expanded="false">Treatments<span class="nav-acc__chev" aria-hidden="true"></span></button>
       <div class="nav-acc__panel">
@@ -150,25 +157,6 @@
           <a href="../treatments/snoring-sleep-apnoea.html">Snoring &amp; Sleep Apnoea</a>
           <a href="../treatments/mouthguards.html">Custom Mouthguards</a>
           <a class="nav-acc__all" href="../treatments/index.html">View all treatments &rarr;</a>
-        </div>
-      </div>
-    </div>
-    <div class="nav-acc">
-      <button type="button" class="nav-acc__head" aria-expanded="false">About<span class="nav-acc__chev" aria-hidden="true"></span></button>
-      <div class="nav-acc__panel">
-        <div class="nav-acc__inner">
-          <a href="../about.html">Our Story</a>
-          <a href="../team.html">Our Team</a>
-        </div>
-      </div>
-    </div>
-    <div class="nav-acc">
-      <button type="button" class="nav-acc__head" aria-expanded="false">Patients<span class="nav-acc__chev" aria-hidden="true"></span></button>
-      <div class="nav-acc__panel">
-        <div class="nav-acc__inner">
-          <a href="../new-patients.html">New Patients</a>
-          <a href="../payment-plans.html">Payment Plans</a>
-          <a href="../offers.html">Offers</a>
         </div>
       </div>
     </div>
@@ -268,16 +256,12 @@
   </div>
   <div class="footer-bottom"><div class="container"><div>© 2026 Dental Studio, Leppington.</div><div class="disclaimer">Treatment outcomes vary between individuals. All dental treatment carries risks and limitations; your dentist will assess your suitability and discuss these with you before proceeding.</div></div></div>
 </footer>
-<div class="ask-bar" data-ask-bar hidden>
-  <button type="button" class="ask-bar__close" aria-label="Dismiss">&times;</button>
-  <div class="ask-bar__title">Got a question? Get in touch</div>
-  <div class="ask-bar__actions">
-    <a href="tel:+61291999690" class="btn btn-outline btn-sm">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Call us
-    </a>
-    <a href="../contact.html" class="btn btn-gold btn-sm">Send message</a>
-  </div>
+<div class="actionbar">
+  <a href="../contact.html" class="btn btn-gold btn-sm">Book Online</a>
+  <a href="tel:+61291999690" class="btn btn-terracotta btn-sm btn-icon">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Call Us
+  </a>
 </div>
 <script src="../js/main.js"></script>
 </body>
