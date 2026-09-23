@@ -1,4 +1,15 @@
-User-agent: *
-Allow: /
+# PREVIEW DEPLOYMENT — not the live site.
+# While the site is hosted on GitHub Pages with placeholder content, search
+# engines are kept out entirely. At launch, on the real domain, replace the
+# block below with:
+#
+#   User-agent: *
+#   Allow: /
+#
+#   Sitemap: https://www.dentalstudiosydney.com.au/sitemap.xml
+#
+# and remove the <meta name="robots" content="noindex, nofollow"> line from
+# every page (each is tagged "PREVIEW ONLY").
 
-Sitemap: https://www.dentalstudiosydney.com.au/sitemap.xml
+User-agent: *
+Disallow: /
