@@ -249,8 +249,10 @@
        The score below is a MANUAL SNAPSHOT, verified 23 September 2026.
        It does not update itself — re-check it periodically, or drop the
        number and keep the link if you would rather not maintain it. -->
-  <section class="stack stack--flat panel-bone" style="padding:34px 0 30px;">
-    <div class="container" style="padding-top:0;">
+  <!-- Bottom padding must clear the overlap of the panel that stacks over
+       this one, or that panel clips the rating card. -->
+  <section class="stack stack--flat panel-bone" style="padding:40px 0 86px;">
+    <div class="container rating-strip__wrap" style="padding-top:0;">
       <div class="rating-strip rise" data-google-rating>
         <span class="rating-strip__stars" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg>
@@ -435,46 +437,6 @@
       <div class="btn-row rise" style="margin-top:40px;">
         <a href="contact.html" class="btn btn-white">Book an appointment</a>
         <a href="offers.html" class="btn btn-outline-invert">All offers</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Meet the dentists -->
-  <section class="stack panel-bone" style="padding-bottom:96px;">
-    <div class="container">
-      <div class="section-head rise">
-        <h2>Meet your dentists</h2>
-        <a href="team.html" class="section-head__link">The whole team &rarr;</a>
-      </div>
-      <p class="rise" style="color:var(--body-text);max-width:660px;margin-bottom:38px;">Three principal dentists lead the practice, supported by associate dentists, oral health therapists and visiting specialists in orthodontics and sedation.</p>
-      <div class="team-grid" data-principals>
-        <a href="team/dr-joseph-saouma.html" class="person rise rise-delay-1">
-          <div class="person__media"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1000&q=80" alt="Dr Joseph Saouma" loading="lazy"></div>
-          <div class="person__body">
-            <div class="person__role">Principal Dentist</div>
-            <div class="person__name">Dr Joseph Saouma</div>
-            <div class="person__interests">Restorative and implant dentistry</div>
-            <span class="person__more">Read biography &rarr;</span>
-          </div>
-        </a>
-        <a href="team/dr-michael-lavorato.html" class="person rise rise-delay-2">
-          <div class="person__media"><img src="https://images.unsplash.com/photo-1667133295315-820bb6481730?w=1000&q=80" alt="Dr Michael Lavorato" loading="lazy"></div>
-          <div class="person__body">
-            <div class="person__role">Principal Dentist</div>
-            <div class="person__name">Dr Michael Lavorato</div>
-            <div class="person__interests">Cosmetic and restorative dentistry</div>
-            <span class="person__more">Read biography &rarr;</span>
-          </div>
-        </a>
-        <a href="team/dr-michael-ishak.html" class="person rise rise-delay-3">
-          <div class="person__media"><img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1000&q=80" alt="Dr Michael Ishak" loading="lazy"></div>
-          <div class="person__body">
-            <div class="person__role">Principal Dentist</div>
-            <div class="person__name">Dr Michael Ishak</div>
-            <div class="person__interests">Oral surgery and general dentistry</div>
-            <span class="person__more">Read biography &rarr;</span>
-          </div>
-        </a>
       </div>
     </div>
   </section>
